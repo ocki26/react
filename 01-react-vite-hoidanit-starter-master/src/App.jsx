@@ -5,15 +5,9 @@ import "./App.css";
 
 const App = () => {
   const [count, setCount] = useState(0);
-
-  // function myFunction() {
-  //   console.log("Hello World");
-  // }
-  const myFunction = () => {
-    console.log("Hello World");
+  const Mycomponet = () => {
+    return <div>hoi dan truong</div>;
   };
-  myFunction();
-
   return (
     <>
       <div>
@@ -25,6 +19,7 @@ const App = () => {
         </a>
       </div>
       <h1>hello world</h1>
+      <Mycomponet />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
