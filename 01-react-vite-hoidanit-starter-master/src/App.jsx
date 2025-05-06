@@ -4,17 +4,19 @@ import {
   ThirdComponent,
 } from "./componets/learn/SecondComponent";
 import "./componets/todo/todo.css";
+import TodoData from "./componets/todo/TodoData";
+import TodoNew from "./componets/todo/TodoNew";
+import ReactLogo from "./assets/react.svg";
+
+``;
 const App = () => {
   return (
     <div className="To_do_container">
       <div className="to-do-tile">to do list</div>
-      <div>
-        <input className="input_todo" type="text" />
-        <button className="button_add">add</button>
-      </div>
-      <div className="to-do-list">
-        <div>learning react</div>
-        <div>watching on youtube</div>
+      <TodoNew />
+      <TodoData />
+      <div className="logo">
+        <img src={ReactLogo} alt="" />
       </div>
     </div>
   );
