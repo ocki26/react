@@ -10,11 +10,17 @@ import ReactLogo from "./assets/react.svg";
 
 ``;
 const App = () => {
+  const hoiDanIt = "garan";
+  const age = 18;
+  const data = {
+    address: "ha noi",
+    country: "vietnam",
+  };
   return (
     <div className="To_do_container">
       <div className="to-do-tile">to do list</div>
       <TodoNew />
-      <TodoData />
+      <TodoData name={hoiDanIt} age={age} data={data} />
       <div className="logo">
         <img src={ReactLogo} alt="" />
       </div>
