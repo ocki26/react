@@ -5,6 +5,7 @@ const MyComponent = () => {
     name: "hoidanit",
     age: 18,
   };
+
   return (
     <>
       <div>{console.log("banh my")}</div>
