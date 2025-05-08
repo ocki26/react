@@ -1,5 +1,7 @@
 const TodoNew = (props) => {
-  consolelog("check props ==>", props);
+  console.log("check props ==>", props);
+  const { AddNewToDo } = props;
+  AddNewToDo("hoidanit");
   return (
     <div className="to-do-new">
       <input className="input_todo" type="text" />
