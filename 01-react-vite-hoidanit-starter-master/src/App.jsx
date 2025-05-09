@@ -1,4 +1,5 @@
 import MyComponent from "./componets/learn/MyComponent";
+import { useState } from "react";
 import {
   SecondComponent,
   ThirdComponent,
@@ -10,6 +11,11 @@ import ReactLogo from "./assets/react.svg";
 
 ``;
 const App = () => {
+  const [Todolist, setTodolist] = useState([
+    { id: 1, name: "hoidanit" },
+    { id: 2, name: "garan" },
+  ]);
+
   const hoiDanIt = "garan";
   const age = 18;
   const data = {
@@ -17,14 +23,14 @@ const App = () => {
     country: "vietnam",
   };
   const AddNewToDo = (name) => {
-    alert(`call me ${name}`);
+    // alert(`call me ${name}`);
   };
 
   return (
     <div className="To_do_container">
       <div className="to-do-tile">to do list</div>
       <TodoNew AddNewToDo={AddNewToDo} />
-      <TodoData name={hoiDanIt} age={age} data={data} />
+      <TodoData name={hoiDanIt} age={age} data={data} Todolist={Todolist} />
       <div className="logo">
         <img src={ReactLogo} alt="" />
       </div>
