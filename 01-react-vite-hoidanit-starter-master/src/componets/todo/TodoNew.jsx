@@ -5,9 +5,10 @@ const TodoNew = (props) => {
 
   const [ValueInput, setValueInput] = useState("garan");
   const { AddNewToDo } = props;
-  AddNewToDo("hoidanit");
+  // AddNewToDo("hoidanit");
   const Handleclick = () => {
     console.log("check value input", ValueInput);
+    AddNewToDo(ValueInput);
   };
   const Handleonchange = (name) => {
     setValueInput(name);

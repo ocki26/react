@@ -23,14 +23,22 @@ const App = () => {
     country: "vietnam",
   };
   const AddNewToDo = (name) => {
-    // alert(`call me ${name}`);
+    const newtodo = {
+      id: randomIntFromInterval(1, 1000000000000000000),
+      name: name,
+    };
+    setTodolist([...Todolist, newtodo]);
+  };
+  const randomIntFromInterval = (min, max) => {
+    // min and max included
+    return Math.floor(Math.random() * (max - min + 1) + min);
   };
 
   return (
     <div className="To_do_container">
       <div className="to-do-tile">to do list</div>
       <TodoNew AddNewToDo={AddNewToDo} />
-      <TodoData name={hoiDanIt} age={age} data={data} Todolist={Todolist} />
+      <TodoData name={AddNewToDo} age={age} data={data} Todolist={Todolist} />
       <div className="logo">
         <img src={ReactLogo} alt="" />
       </div>
