@@ -3,7 +3,7 @@ const TodoNew = (props) => {
   // console.log("check props ==>", props);
   // const ValueInput = "garan";
 
-  const [ValueInput, setValueInput] = useState("garan");
+  const [ValueInput, setValueInput] = useState("");
   const { AddNewToDo } = props;
   // AddNewToDo("hoidanit");
   const Handleclick = () => {
@@ -19,6 +19,7 @@ const TodoNew = (props) => {
         className="input_todo"
         type="text"
         onChange={(event) => Handleonchange(event.target.value)}
+        value={ValueInput}
       />
       <button
         className="button_add"
